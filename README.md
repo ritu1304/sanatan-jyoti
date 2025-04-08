@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm run convert:webp -> use this to convert image to webP format
 
 ## Available Scripts
 
