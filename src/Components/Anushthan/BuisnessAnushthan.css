@@ -1,0 +1,187 @@
+.carousel-container-buisness {
+  padding: 20px;
+  position: relative; /* Make container relative for pagination positioning */
+  padding-bottom: 50px; /* Give space for dots */
+  overflow: visible; /* important to show outside content if needed */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.card {
+  background: #fffae2;
+  border: 1px solid #8e2e0f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.book-button {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #8e2e0f;
+  border: 1px solid #fff;
+  color: white;
+  padding: 8px 26px;
+
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-title {
+  color: #8e2e0f;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  /* font-weight: bold; */
+}
+.contact-banner {
+  background-image: url("/src/assets/buisness\ banner.png"); /* Use your uploaded image */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.overlay {
+  padding: 40px 20px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.overlay h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.whatsapp-button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.05);
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  align-items: flex-end;
+}
+
+.input-group-buisness {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group-buisness label {
+  font-weight: 600;
+  color: #6d1d00;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input-group-buisness input {
+  padding: 10px 12px;
+  border: 1px solid #c77b5f;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 240px;
+  max-width: 100%;
+}
+
+.submit-btn-buisness {
+  background-color: #8b2e0d;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  height: 42px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn-buisness:hover {
+  background-color: #6d1d00;
+}
+.input-group-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submit-btn-buisness {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .input-group-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+  .input-group-buisness input {
+    width: 190px;
+  }
+}
