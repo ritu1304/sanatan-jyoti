@@ -12,6 +12,7 @@ import Accordion from "../Home/HomeFaq";
 import emailIcon from "../../assets-webp/email-icon.webp";
 import addressIcon from "../../assets-webp/adddress-icon.webp";
 import phoneIcon from "../../assets-webp/mobile-icon.webp";
+
 const anushthanData = [
   {
     image: cardPNG,
@@ -100,6 +101,7 @@ const BusinessAnushthan = () => {
           <div className="title" style={{ paddingTop: "20px" }}>
             Buisness Anushthan
           </div>
+          <div className="underline-buisness"></div>
           <div className="form-container">
             <div className="input-group-wrapper">
               <div className="input-group-buisness">
@@ -116,6 +118,7 @@ const BusinessAnushthan = () => {
           {/* <div className="underline"></div> */}
           <div className="carousel-container-buisness">
             <Swiper
+              className="custom-swiper"
               modules={[Navigation, Pagination]}
               spaceBetween={20}
               //   navigation
@@ -152,16 +155,18 @@ const BusinessAnushthan = () => {
               ))}
             </Swiper>
           </div>
-          <center>
+          <div className="underline-buisness width-buisness"></div>
+          <div className="center-wrapper">
             <div className="anushthan-form mobile-visible">
-              <h3 className="form-title">Book Anushthan</h3>
+              <div className="form-title">Book Anushthan</div>
               <ul>
                 {problems.map((problem, index) => (
                   <li key={index}>{problem}</li>
                 ))}
               </ul>
             </div>
-          </center>
+          </div>
+
           <div>
             <div className="title-puja">Content Section</div>
             <p>
@@ -197,7 +202,7 @@ const BusinessAnushthan = () => {
           </div>
         </div>
         <div className="anushthan-form desktop-visible">
-          <h3 className="form-title">Book Anushthan</h3>
+          <div className="form-title">Book Anushthan</div>
           <ul>
             {problems.map((problem, index) => (
               <li key={index}>{problem}</li>
@@ -212,7 +217,7 @@ const BusinessAnushthan = () => {
             href="https://wa.me/919876543210"
             target="_blank"
             rel="noopener noreferrer"
-            className="whatsapp-button"
+            className="whatsapp-button1"
           >
             <img src={whatsappIcon} alt="WhatsApp" />
             +91 9876543210
@@ -256,7 +261,7 @@ const BusinessAnushthan = () => {
           </div>
         </div>
         <div className="contact-form">
-          <h3>Connect with Us</h3>
+          <div className="contact-form-title">Connect with Us</div>
           <form>
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email address" />

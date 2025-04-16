@@ -1,0 +1,151 @@
+.puja-container1 {
+  display: flex;
+  border-radius: 10px;
+  padding: 90px 40px;
+  margin: 0px 20px;
+}
+/* @media (min-width: 768px) { */
+.left-section1 {
+  width: 60%;
+  padding-right: 20px;
+  border-right: 2px solid #cfa57f;
+}
+
+.puja-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.nav-tabs {
+  /* margin-top: 10px; */
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid #686868;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #686868;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #a3622c;
+  color: #8e2e0f;
+}
+
+.tab-content {
+  margin-top: 10px;
+  /* background: #fff9f2; */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.right-section1 {
+  width: 40%;
+  padding-left: 20px;
+}
+
+.chart-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #8e2e0f;
+  font-family: "Batangas", sans-serif;
+}
+
+.right-section1 h3 {
+  color: #8e2e0f;
+  margin: 10px 0;
+  padding-top: 30px;
+  font-size: 28px;
+}
+
+.talk-btn1,
+.book-btn1 {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.talk-btn1 {
+  background-color: #fff;
+  border: 1px solid #8e2e0f;
+  color: #8e2e0f;
+}
+
+.book-btn1 {
+  background-color: #8e2e0f;
+  color: white;
+}
+
+.policy-text {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.policy-text a {
+  color: blue;
+  text-decoration: underline;
+}
+.policy-text input {
+  width: auto !important;
+}
+
+.features p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.wrap-group {
+  display: flex;
+  justify-content: space-between;
+  color: #686868;
+}
+.wrap-icons-team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrap-icons-team img {
+  width: 25px;
+}
+@media (max-width: 768px) {
+  .puja-container1 {
+    flex-direction: column;
+    padding: 90px 0px;
+  }
+  .left-section1 {
+    border-right: none;
+    width: 100%;
+  }
+  .right-section1 {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .nav-tabs {
+    border-bottom: none;
+    gap: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  .tab-button {
+    border: 1px solid #d2700c;
+    border-radius: 5px;
+  }
+  .tab-button.active {
+    border-bottom: 2px solid #a3622c;
+    color: #fff;
+    background-color: #8e2e0f;
+  }
+}

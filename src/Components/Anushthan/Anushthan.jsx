@@ -19,6 +19,12 @@ import addressIcon from "../../assets-webp/adddress-icon.webp";
 import phoneIcon from "../../assets-webp/mobile-icon.webp";
 const AnushthanPage = () => {
   const [activeTab, setActiveTab] = useState("Vedic Anushthan");
+  const [selectedAnushthan, setSelectedAnushthan] = useState("");
+
+  const handleSelectChange = (e) => {
+    setSelectedAnushthan(e.target.value);
+  };
+
   const tabs = [
     "Vedic Anushthan",
     "Health Issue",
@@ -157,53 +163,139 @@ const AnushthanPage = () => {
               </p>
             </div>
           </section>
-          <div className="anushthan-form mobile-visible">
-            <h3 className="form-title">Book Anushthan</h3>
-            <img src={panditImg} alt="Pandit" className="form-image" />
-            <form>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Name</label>
-                  <input type="text" placeholder="Name" />
+          <div className="center-wrapper">
+            <div className="anushthan-form mobile-visible">
+              <div className="form-title">Book Anushthan</div>
+              <img src={panditImg} alt="Pandit" className="form-image" />
+              <form>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Name" />
+                  </div>
+                  <div className="form-group">
+                    <label>Anushthan</label>
+                    <select
+                      value={selectedAnushthan}
+                      onChange={handleSelectChange}
+                    >
+                      <option value="">Select</option>
+                      <option value="Rudrabhishek">Rudrabhishek</option>
+                      <option value="Mahamrityunjaya Jaap">
+                        Mahamrityunjaya Jaap
+                      </option>
+                      <option value="Navgrah Shanti">Navgrah Shanti</option>
+                      <option value="Kaal Sarp Dosh Nivaran">
+                        Kaal Sarp Dosh Nivaran
+                      </option>
+                    </select>
+                  </div>
                 </div>
-                <div className="form-group">
-                  <label>Anushthan</label>
-                  <select>
-                    <option>Select</option>
-                  </select>
-                </div>
-              </div>
 
-              <div className="form-group">
-                <label>Mobile Number</label>
-                <div className="mobile-wrapper">
-                  <span className="country-code">+91</span>
-                  <input type="tel" placeholder="9876543218" />
-                  {/* <select className="dropdown-dummy">
+                <div className="form-group">
+                  <label>Mobile Number</label>
+                  <div className="mobile-wrapper">
+                    <span className="country-code">+91</span>
+                    <input type="tel" placeholder="9876543218" />
+                    {/* <select className="dropdown-dummy">
                 <option>▼</option>
               </select> */}
+                  </div>
                 </div>
-              </div>
 
-              <div className="form-group">
-                <label>Enter OTP</label>
-                <input type="text" placeholder="987654" />
-              </div>
+                <div className="form-group">
+                  <label>Enter OTP</label>
+                  <input type="text" placeholder="987654" />
+                </div>
 
-              <div className="form-group">
-                <label>Enter your Email</label>
-                <input type="email" placeholder="sanatanjyotii@gmail.com" />
-              </div>
+                <div className="form-group">
+                  <label>Enter your Email</label>
+                  <input type="email" placeholder="sanatanjyotii@gmail.com" />
+                </div>
 
-              <button type="submit" className="submit-btn">
-                Book Your Anushthan
-              </button>
-            </form>
+                <button type="submit" className="submit-btn">
+                  Book Your Anushthan
+                </button>
+              </form>
+            </div>
           </div>
           <div>
             <div>
               <div className="title-puja">Anushthan Booking Process</div>
               <div className="underline-puja widthAnushthan"></div>
+
+              <div className="wrap-panditJi">
+                <img src={pandit1} alt="panditji" />
+                <div className="wrap-pandit-text">
+                  {/* <h3>Talk to Pandit Ji First</h3> */}
+                  <span className="orange">Talk </span>
+                  <span className="brown">to </span>
+                  <span className="orange">Pandit Ji </span>
+                  <span className="brown">First</span>
+                  <p>
+                    Get in touch with our experienced astrologers over the phone
+                    to seek guidance for any personal, professional, or
+                    life-related astrological issues.
+                  </p>
+                </div>
+                <img src={arrow1} alt="panditji" />
+              </div>
+
+              <div className="wrap-yagya-pandit">
+                <img
+                  src={yagya}
+                  alt="yagya"
+                  className="desktop-visible yagya"
+                />
+
+                <div className="wrap-text-pandit columnReverse">
+                  <div className="wrap-pandit-text ">
+                    {/* <h3>Discuss Problems, Remedies</h3> */}
+
+                    <span className="brown">Discuss </span>
+                    <span className="orange">Problems, </span>
+                    <span className="brown">Remedies</span>
+                    <p>
+                      Share your personal, family, or astrological concerns and
+                      receive appropriate Vedic solutions for your problems.
+                    </p>
+                  </div>
+                  <img src={pandit2} alt="panditji" className="yagya1" />
+                </div>
+              </div>
+              <center>
+                <img src={arrow1} className="mobile-visible" />
+              </center>
+              <div className="wrap-panditJi arrow-change">
+                <img
+                  src={arrow3}
+                  className="desktop-visible"
+                  style={{ marginRight: "20px" }}
+                />
+                <img src={pandit3} />
+                <div className="wrap-pandit-text">
+                  {/* <h3>Free Pooja Suggestions by Pandit ji</h3> */}
+                  <span className="orange">Free Pooja </span>
+                  <span className="brown">Suggestions by Pandit ji</span>
+                  <p>
+                    Based on your Kundali and concerns, Acharya Ji will provide
+                    free guidance on suitable Pooja and Anushthan for effective
+                    results.
+                  </p>
+                </div>
+                <img src={arrow2} className="desktop-visible" />
+                <center>
+                  <img src={arrow1} className="mobile-visible" />
+                </center>
+              </div>
+              <center>
+                <img
+                  src={yagya}
+                  alt="panditji-yagya"
+                  className="mobile-visible yagya"
+                  style={{ marginBottom: "20px" }}
+                />
+              </center>
             </div>
             {/* <div className="astrology-container">
               <div className="pandit-img pandit-img-1">
@@ -262,7 +354,7 @@ const AnushthanPage = () => {
 
             <div>
               {/* <center> */}{" "}
-              <div className="vedic-banner">
+              <div className="vedic-banner-Anu">
                 Note: If you have booked a pooja with us, then we will not
                 charge any kundali prediction fee till your pooja is done
                 (either it's 6 days, 7 days, 15 days, etc.).
@@ -271,7 +363,7 @@ const AnushthanPage = () => {
             </div>
             <div className="anushthan-container-cate">
               <div className="title">Anushthan Categories</div>
-              <div className="underline"></div>
+              <div className="underline widthCategories"></div>
               <p className="description">
                 Our ancient traditions describe various Anushthans designed to
                 address specific life challenges and fulfill desires. These
@@ -299,42 +391,50 @@ const AnushthanPage = () => {
               </div>
 
               {anushthanData.map((section, idx) => (
-                <div key={idx} className="anushthan-section-cate">
-                  <div className="section-header">
-                    <h2>
-                      {idx + 1}. {section.category}
-                    </h2>
-                    <a href="#">View All</a>
-                  </div>
-                  <p className="section-description">{section.description}</p>
-                  <div className="rituals-list">
-                    {section.items.map((item, i) => (
-                      <div className="ritual-card" key={i}>
-                        <div className="ritual-image-wrapper">
-                          <img
-                            src={item.icon}
-                            alt={item.title}
-                            className="ritual-image"
-                          />
-                          <img
-                            src={muhuratBg}
-                            alt="Frame"
-                            className="ritual-frame"
-                          />
+                <>
+                  <div key={idx} className="anushthan-section-cate">
+                    <div className="section-header">
+                      <h2>
+                        {idx + 1}. {section.category}
+                      </h2>
+                      <a href="#" className="desktop-visible">
+                        View All
+                      </a>
+                    </div>
+                    <p className="section-description">{section.description}</p>
+                    <a href="#" className="mobile-visible viewAll">
+                      View All Anushthan
+                    </a>
+                    <div className="rituals-list">
+                      {section.items.map((item, i) => (
+                        <div className="ritual-card" key={i}>
+                          <div className="ritual-image-wrapper">
+                            <img
+                              src={item.icon}
+                              alt={item.title}
+                              className="ritual-image"
+                            />
+                            <img
+                              src={muhuratBg}
+                              alt="Frame"
+                              className="ritual-frame"
+                            />
+                          </div>
+                          <h3 className="ritual-title">{item.title}</h3>
+                          <p className="ritual-price">INR 5001/-</p>
                         </div>
-                        <h3 className="ritual-title">{item.title}</h3>
-                        <p className="ritual-price">INR 5001/-</p>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                  <div className="underline widthSectionCat"></div>
+                </>
               ))}
             </div>
           </div>
         </div>
 
         <div className="anushthan-form desktop-visible">
-          <h3 className="form-title">Book Anushthan</h3>
+          <div className="form-title">Book Anushthan</div>
           <img src={panditImg} alt="Pandit" className="form-image" />
           <form>
             <div className="form-row">
@@ -344,8 +444,16 @@ const AnushthanPage = () => {
               </div>
               <div className="form-group">
                 <label>Anushthan</label>
-                <select>
-                  <option>Select</option>
+                <select value={selectedAnushthan} onChange={handleSelectChange}>
+                  <option value="">Select</option>
+                  <option value="Rudrabhishek">Rudrabhishek</option>
+                  <option value="Mahamrityunjaya Jaap">
+                    Mahamrityunjaya Jaap
+                  </option>
+                  <option value="Navgrah Shanti">Navgrah Shanti</option>
+                  <option value="Kaal Sarp Dosh Nivaran">
+                    Kaal Sarp Dosh Nivaran
+                  </option>
                 </select>
               </div>
             </div>
@@ -414,7 +522,7 @@ const AnushthanPage = () => {
           </div>
         </div>
         <div className="contact-form">
-          <h3>Connect with Us</h3>
+          <div className="contact-form-title">Connect with Us</div>
           <form>
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email address" />

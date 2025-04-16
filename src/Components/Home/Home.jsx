@@ -52,8 +52,14 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import frame1 from "../../assets/Frame.png";
-import frame2 from "../../assets/Frame.png";
+// import frame1 from "../../assets/Frame.png";
+// import frame2 from "../../assets/Frame.png";
+import frame1 from "../../assets/Sanatan  Panchang hindi.png";
+import frame2 from "../../assets/Sanatan  Panchang.png";
+import frame3 from "../../assets/Auspicious  Muhurat.png";
+import frame4 from "../../assets/Frame (1).png";
+import frame5 from "../../assets/Frame (2).png";
+import frame6 from "../../assets/Vedic Puja &  Anushthan hindi.png";
 import leftA from "../../assets-webp/left Arrow.webp";
 import rightA from "../../assets-webp/right Arrow.webp";
 import cardBg from "../../assets-webp/Mask group.webp";
@@ -92,7 +98,7 @@ import addressIcon from "../../assets-webp/adddress-icon.webp";
 import phoneIcon from "../../assets-webp/mobile-icon.webp";
 import stepImg from "../../assets-webp/step-vertical.webp";
 
-const images = [frame1, frame2, frame1, frame2];
+const images = [frame1, frame2, frame3, frame4, frame5, frame6];
 const categories = [
   { title: "Talk With Astrologer", icon: AstrologerImg },
   { title: "Download Kundli", icon: kundliImg },
@@ -188,7 +194,7 @@ const Carousel = () => {
             slidesPerView={1}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            className="custom-swiper"
+            className="custom-swiper1"
           >
             {images.map((src, index) => (
               <SwiperSlide key={index}>
@@ -566,6 +572,7 @@ const Carousel = () => {
         </center>
         <div className="carousel-container-review">
           <Swiper
+            className="custom-swiper"
             modules={[Navigation, Pagination]}
             spaceBetween={30}
             // slidesPerView={3} // Show 3 slides at a time
@@ -884,7 +891,7 @@ const Carousel = () => {
           </div>
         </div>
         <div className="contact-form">
-          <h3>Connect with Us</h3>
+          <div className="contact-form-title">Connect with Us</div>
           <form>
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email address" />

@@ -1,8 +1,8 @@
 .carousel-container-buisness {
   padding: 20px;
-  position: relative; /* Make container relative for pagination positioning */
-  padding-bottom: 50px; /* Give space for dots */
-  overflow: visible; /* important to show outside content if needed */
+  position: relative;
+  /* padding-bottom: 50px;  */
+  overflow: visible;
 }
 
 .swiper-pagination {
@@ -73,14 +73,13 @@
   background-image: url("/src/assets/buisness\ banner.png"); /* Use your uploaded image */
   background-size: cover;
   background-position: center;
-  padding: 50px 20px;
+  padding: 10px 10px;
   text-align: center;
   position: relative;
-  font-family: "Poppins", sans-serif;
 }
 
 .overlay {
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
   border-radius: 12px;
   display: inline-block;
 }
@@ -88,11 +87,12 @@
 .overlay h2 {
   color: #fff;
   font-size: 28px;
-  font-weight: 600;
   margin-bottom: 20px;
+  font-weight: bold;
+  font-family: "Batangas", sans-serif;
 }
 
-.whatsapp-button {
+.whatsapp-button1 {
   background-color: #fff;
   color: #000;
   padding: 10px 20px;
@@ -106,13 +106,23 @@
   transition: all 0.3s ease;
 }
 
-.whatsapp-button img {
+.whatsapp-button1 img {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+  animation: bounce 0.5s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-.whatsapp-button:hover {
+.whatsapp-button1:hover {
   transform: scale(1.05);
 }
 .form-container {
@@ -182,6 +192,41 @@
     gap: 10px;
   }
   .input-group-buisness input {
-    width: 190px;
+    width: 85%;
+  }
+  .underline-buisness {
+    width: 220px;
+    height: 4px;
+    background: transparent;
+    position: relative;
+    margin: 10px auto;
+  }
+
+  .underline-buisness::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #8e2e0f 50%, #d2700c 50%);
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: drawline-center 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes drawline-center {
+    0% {
+      transform: scaleX(0);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  .width-buisness {
+    width: 300px;
+    margin-bottom: 40px;
   }
 }

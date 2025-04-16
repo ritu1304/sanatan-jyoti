@@ -5,6 +5,7 @@ import Footer from "./Footer/Footer";
 import Home from "./Home/Home";
 import AnushthanPage from "./Anushthan/Anushthan";
 import BusinessAnushthan from "./Anushthan/BuisnessAnushthan";
+import SaturnChant from "./Anushthan/SaturnChant";
 
 // ...other pages
 
@@ -16,6 +17,7 @@ const Routing = () => {
         <Route path="/" element={<Home />} />
         <Route path="/anushthan" element={<AnushthanPage />} />
         <Route path="/buisness-anushthan" element={<BusinessAnushthan />} />
+        <Route path="/saturn-chant" element={<SaturnChant />} />
       </Routes>
       <Footer />
     </Router>
