@@ -70,7 +70,7 @@
   /* font-weight: bold; */
 }
 .contact-banner {
-  background-image: url("/src/assets/buisness\ banner.png"); /* Use your uploaded image */
+  background-image: url("/src/assets/buisness\ banner.png");
   background-size: cover;
   background-position: center;
   padding: 10px 10px;

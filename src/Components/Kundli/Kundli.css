@@ -1,0 +1,152 @@
+.free-sample {
+  /* margin-top: 10px; */
+  color: #8e2e0f;
+  background-color: #fff;
+  border: 1px solid #8e2e0f;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+.sample-kundli-title {
+  color: #122dbc;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Batangas", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+.panditJi-banner {
+  background-image: url("/src/assets/pandit-banner.png");
+  background-size: cover;
+  background-position: center;
+  padding: 10px 10px;
+  text-align: center;
+  position: relative;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+.pandit-banner-title {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  font-family: "Batangas", sans-serif;
+  padding-top: 10px;
+}
+.pandit-banner-desc {
+  color: #fff;
+  padding: 0px 10px;
+}
+.card-list1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 2rem;
+  justify-content: center;
+  place-items: center;
+}
+
+.card1 {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.card-inner1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card1:hover .card-inner1 {
+  transform: rotateY(180deg);
+}
+
+.card-front1,
+.card-back1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front1 {
+  background-color: #fff8f0;
+  text-align: center;
+}
+.card-back1 {
+  background-color: rgba(165, 42, 42, 0.8);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-description1 {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 1024px) {
+  .card-list1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-list1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-list1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card-image1 {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+}
+
+.card-info1 {
+  padding: 10px;
+}
+
+.card-button1 {
+  position: absolute;
+  top: 200px;
+  padding: 5px;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  background-color: #9c4018;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.card-name1 {
+  font-size: 1rem;
+  margin: 12px 0 4px;
+  color: #9c4018;
+}
+
+.card-experience1 {
+  font-size: 0.9rem;
+  color: #9c4018;
+  text-align: center !important;
+}

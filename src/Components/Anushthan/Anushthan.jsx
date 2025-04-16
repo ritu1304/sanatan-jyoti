@@ -17,24 +17,55 @@ import Accordion from "../Home/HomeFaq";
 import emailIcon from "../../assets-webp/email-icon.webp";
 import addressIcon from "../../assets-webp/adddress-icon.webp";
 import phoneIcon from "../../assets-webp/mobile-icon.webp";
+const tabs = [
+  {
+    title: "Vedic Anushthan",
+    description:
+      "Auspicious rituals dedicated to achieving desired results, performed with devotion and commitment, along with divine worship for success and blessings.",
+  },
+  {
+    title: "Health Issue",
+    description:
+      "Anushthan for improving health, removing negative energy, and promoting physical well-being.",
+  },
+  {
+    title: "Carrier Issue",
+    description:
+      "Rituals to remove obstacles in career growth and attract better opportunities.",
+  },
+  {
+    title: "Business Issue",
+    description:
+      "Helps in resolving business-related problems and attracting prosperity.",
+  },
+  {
+    title: "Court Cases",
+    description:
+      "Special anushthans for legal issues to bring justice and peace.",
+  },
+  {
+    title: "Job Issue",
+    description:
+      "Helps in getting a desired job or resolving job-related challenges.",
+  },
+  {
+    title: "Love life Issue",
+    description: "Rituals for love, harmony, and removing misunderstandings.",
+  },
+  {
+    title: "Marriage Issue",
+    description:
+      "Anushthan for timely marriage or resolving marital conflicts.",
+  },
+];
 const AnushthanPage = () => {
-  const [activeTab, setActiveTab] = useState("Vedic Anushthan");
+  const [activeTab, setActiveTab] = useState(tabs[0]);
   const [selectedAnushthan, setSelectedAnushthan] = useState("");
 
   const handleSelectChange = (e) => {
     setSelectedAnushthan(e.target.value);
   };
 
-  const tabs = [
-    "Vedic Anushthan",
-    "Health Issue",
-    "Carrier Issue",
-    "Business Issue",
-    "Court Cases",
-    "Job Issue",
-    "Love life Issue",
-    "Marriage Issue",
-  ];
   const anushthanData = [
     {
       category: "Business-Related Problems",
@@ -127,40 +158,17 @@ const AnushthanPage = () => {
             <div className="anushthan-tabs">
               {tabs.map((tab) => (
                 <button
-                  key={tab}
-                  className={activeTab === tab ? "active" : ""}
+                  key={tab.title}
+                  className={activeTab.title === tab.title ? "active" : ""}
                   onClick={() => setActiveTab(tab)}
                 >
-                  {tab}
+                  {tab.title}
                 </button>
               ))}
             </div>
 
             <div className="anushthan-description">
-              <p>
-                Anushthan refers to Vedic rituals and divine worship performed
-                to achieve desired results. These sacred ceremonies help in
-                reducing problems arising from physical, mental, familial,
-                business, and planetary imbalances. Through Anushthan, one can
-                seek relief from fear, distress, illness, financial loss, and
-                other difficulties.
-              </p>
-              <p>
-                For Anushthan to be truly effective, it must be conducted with
-                precision by expert Acharyas following Vedic traditions. Any
-                errors in the process can lead to adverse effects. At Sanatan
-                Jyoti, all Anushthans are performed strictly as per the Vedic
-                scriptures by Gurukul-trained, highly skilled Acharyas.
-              </p>
-              <p>
-                Life naturally has ups and downs, but when challenges persist,
-                seeking a solution becomes essential. Vedic Anushthans help
-                remove negative influences and bring happiness, peace, and
-                prosperity. If you are facing obstacles in life, consult our
-                experienced astrologers. They will guide you to the most
-                suitable Anushthan for your specific concerns, leading to
-                positive transformations in your life.
-              </p>
+              <p>{activeTab.description}</p>
             </div>
           </section>
           <div className="center-wrapper">
@@ -197,9 +205,6 @@ const AnushthanPage = () => {
                   <div className="mobile-wrapper">
                     <span className="country-code">+91</span>
                     <input type="tel" placeholder="9876543218" />
-                    {/* <select className="dropdown-dummy">
-                <option>▼</option>
-              </select> */}
                   </div>
                 </div>
 

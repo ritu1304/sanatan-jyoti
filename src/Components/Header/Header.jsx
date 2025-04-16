@@ -8,6 +8,7 @@ const Header = () => {
       <div className="logo">SanatanJyoti</div>
       <nav className="nav">
         <Link to="/">Home</Link>
+        <Link to="/kundli">Kundli</Link>
         <Link to="/anushthan">Anushthan</Link>
         <Link to="/buisness-anushthan">Buisnesss Anushthan</Link>
         <Link to="/saturn-chant">Saturn Chant</Link>
